@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Lab-02: Hình Ngôi Nhà</title>
+    <link rel="stylesheet" href="webgl-tutorials.css">
+    <script src="webgl-utils.js"></script>
+    <script src="webgl-lessons-ui.js"></script>
+    <style>
+        body {
+          margin: 0;
+        }
+        canvas {
+          width: 100vw;
+          height: 100vh;
+          display: block;
+        }
+        .header {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .instructions {
+            max-width: 500px;
+            margin: 0 auto 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        #uiContainer {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 3;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .checkbox-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>WebGL Lab-02: Hình Ngôi Nhà với Phép Biến Đổi</h1>
+    </div>
+    <div class="instructions">
+        <p>Sử dụng các nút để điều chỉnh vị trí, xoay và thu phóng hình ngôi nhà. Nhấn các checkbox để bật/tắt animation và hiển thị nhiều ngôi nhà.</p>
+    </div>
+    <div class="canvas-container">
+        <canvas id="webglCanvas" width="1000" height="500"></canvas>
+    </div>
+    
+    <div id="uiContainer">
+      <div id="ui">
+        <div id="x"></div>
+        <div id="y"></div>
+        <div id="angle"></div>
+        <div id="scaleX"></div>
+        <div id="scaleY"></div>
+        <div class="checkbox-container">
+            <label><input id="animation" type="checkbox" checked> Animation</label>
+        </div>
+        <div class="checkbox-container">
+            <label><input id="multipleObjects" type="checkbox"> Multiple Objects</label>
+        </div>
+      </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
